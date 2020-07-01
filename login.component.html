@@ -1,0 +1,100 @@
+<div class="modal  fade"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" id="exampleModal1" tabindex="-1" >
+    <div class="modal-dialog  modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+            <div class="modal-body">
+                <section id="loginsec">
+                    <div class="container">
+                        <div class="m-auto">
+                            <div class="p-4">
+                                <form [formGroup]="formLogin" autocomplete="off" (ngsubmit)="onSubmit()">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-append ">
+                                            <div class="input-group-text"><span class="fas fa-envelope"></span></div>
+
+                                        </div>
+                                        <input type="email" formControlName="LoginEmail" class="form-control" placeholder="Email">
+
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-append ">
+                                            <div class="input-group-text"><span class="fas fa-lock"></span></div>
+                                        </div>
+                                        <input type="password" formControlName="LoginPassword" class="form-control" placeholder="Password">
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                         <button type="submit" [disabled]='!formLogin.valid' id="abcdef"  class="btn btn-info btn-block btn-flat form-control ">Login</button>
+                                    </div>
+                                    <div class="input-group mb-3">
+                                    <button type="button"  class="btn btn-default btn-success btn-block"   id="forgot" > Forgot Password</button>
+                                    </div>
+                                    <div class="text-center">
+                                    <a href="#" >Log Out</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<!--forgot password button modal-->
+
+<div class="modal" id="ForgotPasswordModal" tabindex="-1">
+    <div class="modal-dialog modal-sm " role="document" >
+        <div class="modal-content"  >
+            <div class="modal-header">
+                <h5 class="modal-title" >Forgot Password </h5>
+                <button class="close"  id="cancel1"  data-dismiss="modal">&times;</button>
+            </div>
+         
+           <div class="modal-body" >
+               
+                <form [formGroup]="formForgotPassword" autocomplete="off" >
+                    <div class="text-center">
+                         <h3 ><i class="fa fa-lock fa-2x" ></i></h3>
+                         <h3 >Forgot Password ?</h3>
+                         <p >You can reset your password  here</p>
+                    </div>
+                    <div class="input-group mb-3">
+                    
+                        <div class="input-group-append ">
+                            <div class="input-group-text"><span class="fas fa-envelope"></span></div>
+                        </div>
+                        <input type="email" formControlName="Email"  class="form-control" placeholder="Email">
+                    </div>
+                    <div class="input-group mb-3">
+                        <button type="submit" [disabled]='!formForgotPassword.valid' class="btn btn-info btn-block btn-flat form-control ">Reset Password</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Login email confirm modal-->
+<div class="modal" id="abcde" tabindex="-1">
+    <div class="modal-dialog modal-sm " role="document" >
+        <div class="modal-content"  >
+            <div class="modal-header">
+                <h5 class="modal-title">Verify Email</h5>
+                <button class="close"  id="cancel"  data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>You did not verify your email. please click on resent email button to verify your email.</p>
+                <div class="input-group mb-3">
+                    <button type="button"  class="btn btn-danger btn-block btn-flat form-control"  >Resend Email</button>
+                </div>
+            </div>
+        </div>
+    </div>        
+</div>
+
